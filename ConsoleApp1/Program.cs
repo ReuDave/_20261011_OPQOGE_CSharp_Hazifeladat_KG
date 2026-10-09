@@ -16,7 +16,7 @@ namespace ConsoleApp1
         {
             // nyilvántartó rendszer konténer osztály inicializálása (jó rövid neve van)
             FoldHivatalIngatlanNyilvantartoRendszer FHINYR = new FoldHivatalIngatlanNyilvantartoRendszer();
-            // a real_estate.txt a bin/Debug mappában van!
+            // a real_estate.txt a bin/Debug/net8.0 mappában van!
             StreamReader sr = new StreamReader("real_estate.txt", true);
             while (!sr.EndOfStream)
             {

@@ -4,68 +4,80 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _20261011_OPQOGE_Hazi_Feladat_Kovasznai_Gergely
+namespace ConsoleApp1
 {
-    internal class Ingatlan
+    // Reucov Dávid OPQOGE
+    internal class Program
     {
-        private string helyrajziSzam;
-
-        public string HelyrajziSzam
+        // vonaton idefelé megcsináltam a házit Kovásznai Gergőnek
+        static void Main(string[] args)
         {
-            get
+            FoldHivatalIngatlanNyilvantartoRendszer FHINYR = new FoldHivatalIngatlanNyilvantartoRendszer();
+            StreamReader sr = new StreamReader("real_estate.txt", true);
+            while (!sr.EndOfStream)
             {
-                if (helyrajziSzam.Length < 3)
+                string[] adatok = sr.ReadLine().Split(";");
+                // használhattam volna if elágazásokat is, de a switch mellett döntöttem mert egész fix
+                // számok, hogy hány darab adatból állnak össze a sorok
+                // ingatlan: 2db pl.: 77463/A/9;6700000
+                // termőföld: 4db pl.: 71001/G/21;39900000;erdo;11.42
+                // lakó terület: 5db pl.: 99120 / 5/B/17;19900000;Vércsorog, Kossuth u. 18.;csaladi_haz;false
+                // minden fajta ingatlan helyrajzi számmal és árral kezdődik, így őket nem kell egy case-be tenni
+                string helyrajziszam = adatok[0];
+                int ar = int.Parse(adatok[1]);
+                switch (adatok.Length)
                 {
-                    throw new Exception("HIBA: nem lehet 3 karakternél rövidebb a helyrajzi szám!");
+                    case 2:
+                        // ez egy sima ingatlan
+                        Ingatlan ingatlan = new Ingatlan(helyrajziszam, ar);
+                        // hozzáadom ingatlanként a nyilvántartáshoz
+                        FHINYR.UjIngatlan(ingatlan);
+                        break;
+                    case 4:
+                        // ez egy termőföld
+                        // kiszedem a 3. és 4. adattagokat azokból a sorokból ahol van
+                        // pl.: 71001/G/21;39900000;erdo;11.42
+                        string muvelesiAg = adatok[2];
+                        double terulet = double.Parse(
+                             adatok[3].Replace('.', ',')); // át kellett alakítanom a 6.2-t -> 6,2-re!
 
+                        // ide tettem minden helyrajzi szám elé egy nullát mert máskülönben jogosan hibát dob
+                        TermoFold termoFold = new TermoFold(
+                            "0" + helyrajziszam, ar, muvelesiAg, terulet
+                        );
+                        // hozzáadom a termőföldeket
+                        FHINYR.UjIngatlan(termoFold);
+                        break;
+                    case 5:
+                        // a lakóépületnek a 3. és 4. adattagja eltér a termőföldétől
+                        string cim = adatok[2];
+                        string fajta = adatok[3];
+                        // hozzáadom az 5. adattagot is ami true/false
+                        bool bontandoE = bool.Parse(adatok[4]);
+                        LakoEpulet lakoEpulet = new LakoEpulet(helyrajziszam, ar, cim, fajta, bontandoE);
+                        // hozzáadom lakóépületként
+                        FHINYR.UjIngatlan(lakoEpulet);
+                        break;
                 }
-                // szorgalmi:
-                foreach (char karakter in helyrajziSzam)
-                {
-                    if (!char.IsLetterOrDigit(karakter) && karakter != '/')
-                    {
-                        throw new Exception("HIBA: Csak betűk, számok és perjel (/) állhat a helyrajzi számban!");
-                    }
-                }
-                return helyrajziSzam;
             }
-
-        }
-
-        private int ar;
-
-        public int Ar
-        {
-            get { return ar; }
-        }
-        // 1.ső konstruktor
-        public Ingatlan(string _helyrajzi_szam, int _ar)
-        {
-            if (_ar % 100000 != 0 || _ar <= 0)
+            // ki íratom a különböző feladatok értékeit
+            Console.WriteLine("1. feladat:");
+            Console.WriteLine($"A legdrágább ingatlan helyrajzi száma: {FHINYR.LegdragabbIngatlan.HelyrajziSzam}");
+            Console.WriteLine($"A legdrágább ingatlan ára: {FHINYR.LegdragabbIngatlan.Ar} Ft");
+            Console.WriteLine("\n2. feladat:");
+            // ugyan a feladat leírás szőlő-t írt, de arra hibára fut jogosan mert nincsen egy sem
+            // gyümölcsösre meg 1 darab van (16473/7/C/11;14600000;gyumolcsos;6.2)
+            // 6.2 osztva 1-gyel = 6.2 
+            Console.WriteLine($"A gyümölcsös termőföldek hektár területének átlaga: {FHINYR.AtlagosTerulet("gyumolcsos")}");
+            // a társasház mint példa szintén nincsen a fájlban, így maradtam a csaladi_haz értéknél
+            Console.WriteLine("\n3. feladat: Bontandó családi ház(ak) címe(i): ");
+            foreach (var epulet in FHINYR.BontandoEpuletekCimei("csaladi_haz"))
             {
-                throw new Exception("HIBA: Az árnak 100 ezerrel oszthatónak kell lennie és egész pozitív értéknek!");
+                Console.WriteLine(epulet); // kiírja a 2 címet amit talált!
             }
-            helyrajziSzam = _helyrajzi_szam;
-            ar = _ar;
+            // kész :)
+            // remélem nem volt túl sok a komment, a gondolat menetemet írtam le!
+            // Szép napot kívánok a tanár úrnak!!!
         }
-
-        //2.dik konstruktor, 1 milliárd árral
-        public Ingatlan(string _helyrajzi_szam) : this(_helyrajzi_szam, 1000000000)
-        {
-
-        }
-
-        public void Dragitas(int noveles)
-        {
-            if (noveles >= 0)
-            {
-                ar += noveles;
-            }
-            else
-            {
-                throw new Exception("HIBA: Nem lehet egy ingatlan olcsóbb!");
-            }
-        }
-
     }
 }

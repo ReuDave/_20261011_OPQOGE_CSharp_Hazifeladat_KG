@@ -5,6 +5,22 @@
     {
       "AbsoluteMoniker": "D:0:0:{D5369BCF-48D8-4008-BED5-05F9B3C48A97}|ConsoleApp1.csproj|c:\\users\\reuco\\source\\repos\\_20261011_opqoge_csharp_hazifeladat_kg\\consoleapp1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D5369BCF-48D8-4008-BED5-05F9B3C48A97}|ConsoleApp1.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D5369BCF-48D8-4008-BED5-05F9B3C48A97}|ConsoleApp1.csproj|c:\\users\\reuco\\source\\repos\\_20261011_opqoge_csharp_hazifeladat_kg\\consoleapp1\\ingatlan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D5369BCF-48D8-4008-BED5-05F9B3C48A97}|ConsoleApp1.csproj|solutionrelative:ingatlan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D5369BCF-48D8-4008-BED5-05F9B3C48A97}|ConsoleApp1.csproj|c:\\users\\reuco\\source\\repos\\_20261011_opqoge_csharp_hazifeladat_kg\\consoleapp1\\foldhivatalingatlannyilvantartorendszer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D5369BCF-48D8-4008-BED5-05F9B3C48A97}|ConsoleApp1.csproj|solutionrelative:foldhivatalingatlannyilvantartorendszer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D5369BCF-48D8-4008-BED5-05F9B3C48A97}|ConsoleApp1.csproj|c:\\users\\reuco\\source\\repos\\_20261011_opqoge_csharp_hazifeladat_kg\\consoleapp1\\termofold.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D5369BCF-48D8-4008-BED5-05F9B3C48A97}|ConsoleApp1.csproj|solutionrelative:termofold.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D5369BCF-48D8-4008-BED5-05F9B3C48A97}|ConsoleApp1.csproj|c:\\users\\reuco\\source\\repos\\_20261011_opqoge_csharp_hazifeladat_kg\\consoleapp1\\lakoepulet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D5369BCF-48D8-4008-BED5-05F9B3C48A97}|ConsoleApp1.csproj|solutionrelative:lakoepulet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,8 +30,60 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 4,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Ingatlan.cs",
+              "DocumentMoniker": "C:\\Users\\reuco\\source\\repos\\_20261011_OPQOGE_CSharp_Hazifeladat_KG\\ConsoleApp1\\Ingatlan.cs",
+              "RelativeDocumentMoniker": "Ingatlan.cs",
+              "ToolTip": "C:\\Users\\reuco\\source\\repos\\_20261011_OPQOGE_CSharp_Hazifeladat_KG\\ConsoleApp1\\Ingatlan.cs",
+              "RelativeToolTip": "Ingatlan.cs",
+              "ViewState": "AgIAADIAAAAAAAAAAAAgwD4AAABGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-09T05:58:14.222Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "FoldHivatalIngatlanNyilvantartoRendszer.cs",
+              "DocumentMoniker": "C:\\Users\\reuco\\source\\repos\\_20261011_OPQOGE_CSharp_Hazifeladat_KG\\ConsoleApp1\\FoldHivatalIngatlanNyilvantartoRendszer.cs",
+              "RelativeDocumentMoniker": "FoldHivatalIngatlanNyilvantartoRendszer.cs",
+              "ToolTip": "C:\\Users\\reuco\\source\\repos\\_20261011_OPQOGE_CSharp_Hazifeladat_KG\\ConsoleApp1\\FoldHivatalIngatlanNyilvantartoRendszer.cs",
+              "RelativeToolTip": "FoldHivatalIngatlanNyilvantartoRendszer.cs",
+              "ViewState": "AgIAADsAAAAAAAAAAAAgwEsAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-09T05:53:50.589Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "TermoFold.cs",
+              "DocumentMoniker": "C:\\Users\\reuco\\source\\repos\\_20261011_OPQOGE_CSharp_Hazifeladat_KG\\ConsoleApp1\\TermoFold.cs",
+              "RelativeDocumentMoniker": "TermoFold.cs",
+              "ToolTip": "C:\\Users\\reuco\\source\\repos\\_20261011_OPQOGE_CSharp_Hazifeladat_KG\\ConsoleApp1\\TermoFold.cs",
+              "RelativeToolTip": "TermoFold.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-09T05:52:45.475Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "LakoEpulet.cs",
+              "DocumentMoniker": "C:\\Users\\reuco\\source\\repos\\_20261011_OPQOGE_CSharp_Hazifeladat_KG\\ConsoleApp1\\LakoEpulet.cs",
+              "RelativeDocumentMoniker": "LakoEpulet.cs",
+              "ToolTip": "C:\\Users\\reuco\\source\\repos\\_20261011_OPQOGE_CSharp_Hazifeladat_KG\\ConsoleApp1\\LakoEpulet.cs",
+              "RelativeToolTip": "LakoEpulet.cs",
+              "ViewState": "AgIAACMAAAAAAAAAAAAgwDIAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-08T20:15:46.581Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -24,7 +92,7 @@
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\Users\\reuco\\source\\repos\\_20261011_OPQOGE_CSharp_Hazifeladat_KG\\ConsoleApp1\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAADMAAAAAAAAAAAAuwEcAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAEYAAAAAAAAAAAAAAAgAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-10-08T12:16:13.054Z",
               "EditorCaption": ""

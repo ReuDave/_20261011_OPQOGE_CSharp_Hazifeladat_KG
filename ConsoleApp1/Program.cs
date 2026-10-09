@@ -1,18 +1,22 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+using System.IO; // StreamReader miatt van meghívva
+using System.Collections.Generic; // a List<> miatt van meghívva
+using System.Linq; // LINQ
 using System.Text;
 using System.Threading.Tasks;
 
 namespace ConsoleApp1
 {
     // Reucov Dávid OPQOGE
+    // https://github.com/ReuDave/_20261011_OPQOGE_CSharp_Hazifeladat_KG.git
     internal class Program
     {
         // vonaton idefelé megcsináltam a házit Kovásznai Gergőnek
         static void Main(string[] args)
         {
+            // nyilvántartó rendszer konténer osztály inicializálása (jó rövid neve van)
             FoldHivatalIngatlanNyilvantartoRendszer FHINYR = new FoldHivatalIngatlanNyilvantartoRendszer();
+            // a real_estate.txt a bin/Debug mappában van!
             StreamReader sr = new StreamReader("real_estate.txt", true);
             while (!sr.EndOfStream)
             {
